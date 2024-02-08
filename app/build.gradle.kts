@@ -1,7 +1,14 @@
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
-    alias(libs.plugins.androidApplication)
-    alias(libs.plugins.kotlinAndroid)
+    libs.plugins.run {
+        alias(androidApplication)
+        alias(hilt.plugin)
+        alias(kotlinAndroid)
+        alias(ksp)
+        alias(kotlin.parcelize)
+//        alias(google.services)
+        alias(firebase.crashlytics)
+    }
 }
 
 android {
@@ -41,7 +48,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.8"
     }
     packaging {
         resources {
@@ -52,19 +59,37 @@ android {
 
 dependencies {
 
-    implementation(libs.core.ktx)
-    implementation(libs.lifecycle.runtime.ktx)
-    implementation(libs.activity.compose)
-    implementation(platform(libs.compose.bom))
-    implementation(libs.ui)
-    implementation(libs.ui.graphics)
-    implementation(libs.ui.tooling.preview)
-    implementation(libs.material3)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.espresso.core)
-    androidTestImplementation(platform(libs.compose.bom))
-    androidTestImplementation(libs.ui.test.junit4)
-    debugImplementation(libs.ui.tooling)
-    debugImplementation(libs.ui.test.manifest)
+    libs.run {
+        //junit
+        testImplementation(junit)
+        //test
+        androidTestImplementation(bundles.test)
+        //core
+        implementation(androidx.core)
+        //compose
+        implementation(platform(androidx.compose.bom))
+        androidTestImplementation(platform(androidx.compose.bom))
+        debugImplementation(ui.tooling)
+        implementation(bundles.compose)
+        //room
+        implementation(bundles.room)
+        annotationProcessor(androidx.room.compiler)
+        ksp(androidx.room.compiler)
+        //hilt
+        implementation(bundles.hilt)
+        ksp(hilt.compiler)
+        //navigation
+        implementation(bundles.navigation)
+        //timber
+        implementation(timber)
+        //lifecycle
+        implementation(bundles.lifecycle)
+        //firebase
+        implementation(platform(firebaseBom))
+//        implementation(bundles.firebase)
+        //swipe
+        implementation(swipe)
+        //pager
+        implementation(bundles.accompanist)
+    }
 }
