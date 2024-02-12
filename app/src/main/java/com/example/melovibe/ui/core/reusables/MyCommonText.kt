@@ -11,12 +11,12 @@ import com.example.melovibe.ui.core.theme.robotoSlab
 
 @Composable
 fun MyCommonText(
+    modifier: Modifier = Modifier,
     text: String,
     color: Color = Color.Unspecified,
-    modifier: Modifier = Modifier,
     fontSize: TextUnit = TextUnit.Unspecified,
     fontWeight: FontWeight = FontWeight.Normal,
-    fontFamily: FontFamily = robotoSlab
+    fontFamily: FontFamily = robotoSlab,
 ) {
     Text(
         text = text,
@@ -24,6 +24,6 @@ fun MyCommonText(
         modifier = modifier,
         fontSize = fontSize,
         fontWeight = fontWeight,
-        fontFamily = robotoSlab
+        fontFamily = fontFamily
     )
 }

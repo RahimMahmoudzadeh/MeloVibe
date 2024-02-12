@@ -17,7 +17,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.melovibe.R
 import com.example.melovibe.ui.core.reusables.MyCommonText
 import com.example.melovibe.ui.core.theme.AppTheme
 import com.example.melovibe.ui.domain.data_class.PlaylistCategoryData
@@ -25,10 +24,10 @@ import com.example.melovibe.ui.domain.data_class.PlaylistCategoryData
 @Composable
 fun YourPlayListDataItem(item: PlaylistCategoryData) {
     Row(
-        Modifier.padding(horizontal = 10.dp)
+        Modifier.padding(horizontal = 20.dp)
     ) {
         Image(
-            painter = painterResource(id = R.drawable.havana),
+            painter = painterResource(id = item.image),
             contentDescription = null,
             modifier = Modifier
                 .width(70.dp)
