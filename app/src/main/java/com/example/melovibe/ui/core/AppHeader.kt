@@ -29,8 +29,8 @@ fun AppHeader() {
         ) {
             MyCommonText(
                 text = "MeloVibe",
-                fontSize = 19.sp,
-                fontWeight = FontWeight.Black,
+                fontSize = 17.sp,
+                fontWeight = FontWeight.Medium,
                 color = AppTheme.colorScheme.primary
 
             )
