@@ -1,4 +1,4 @@
-package com.example.melovibe.ui.views.playlist_view.widgets.header
+package com.example.melovibe.ui.screen.playlist_screen.widgets.header
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement

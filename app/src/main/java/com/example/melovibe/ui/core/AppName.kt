@@ -19,7 +19,7 @@ import com.example.melovibe.ui.core.reusables.MyCommonText
 import com.example.melovibe.ui.core.theme.AppTheme
 
 @Composable
-fun AppHeader() {
+fun AppName() {
     Box {
         Row(
             horizontalArrangement = Arrangement.SpaceBetween,
@@ -47,7 +47,6 @@ fun AppHeader() {
 
                 )
             }
-
         }
     }
 }

@@ -22,6 +22,7 @@ fun MyAppIconButton(
         modifier = modifier,
         enabled = enabled,
 
+
         ) {
         val color = if (tintColor != Color.Unspecified)
             tintColor else AppTheme.colorScheme.primary
@@ -30,6 +31,7 @@ fun MyAppIconButton(
             imageVector = iconResId,
             contentDescription = contentDesc,
             tint = color,
+            modifier = modifier
         )
     }
 }

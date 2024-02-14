@@ -1,4 +1,4 @@
-package com.example.melovibe.ui.views.playlist_view
+package com.example.melovibe.ui.screen.playlist_screen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -11,25 +11,27 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.melovibe.R
+import com.example.melovibe.ui.core.AppName
 import com.example.melovibe.ui.core.reusables.MyCommonText
 import com.example.melovibe.ui.core.theme.AppTheme
 import com.example.melovibe.ui.domain.data_class.PlaylistCategoryData
-import com.example.melovibe.ui.views.playlist_view.widgets.body.YourPlaylistInit
-import com.example.melovibe.ui.views.playlist_view.widgets.footer.CurrentMusicStatusBox
-import com.example.melovibe.ui.views.playlist_view.widgets.header.PlaylistBoxSlider
+import com.example.melovibe.ui.screen.playlist_screen.widgets.body.YourPlaylistInit
+import com.example.melovibe.ui.screen.playlist_screen.widgets.footer.AudioPlaylistBridge
+import com.example.melovibe.ui.screen.playlist_screen.widgets.header.PlaylistBoxSlider
 
 @Composable
-fun MainPlaylistView(modifier: Modifier = Modifier) {
+fun MainPlaylistView(navController: NavHostController) {
     val playlistTitle = "Your Playlist"
     val space = 20.dp
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.SpaceBetween
     ) {
-        Column(
-        ) {
-            Spacer(modifier = Modifier.height(70.dp))
+        Column {
+            AppName()
+            Spacer(modifier = Modifier.height(40.dp))
             PlaylistBoxSlider()
             Spacer(modifier = Modifier.height(40.dp))
 
@@ -70,6 +72,6 @@ fun MainPlaylistView(modifier: Modifier = Modifier) {
             )
 
         }
-        CurrentMusicStatusBox()
+        AudioPlaylistBridge(navController = navController)
     }
 }

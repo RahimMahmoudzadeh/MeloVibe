@@ -6,9 +6,9 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.graphics.Color
 
 val LightModeColors: ColorScheme = lightColorScheme(
-    background = Color(0xFFf3f3f3),
+    background = Color(0xFFEbEbEb),
     primary = Color(0xFF090C0E),
-    secondary = Color(0xFFD8D8D8),
+    secondary = Color(0xFFCCCCCC),
     tertiary = Color(0xFF979797),
 )
 

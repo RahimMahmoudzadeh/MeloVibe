@@ -17,6 +17,7 @@ fun MyCommonText(
     fontSize: TextUnit = TextUnit.Unspecified,
     fontWeight: FontWeight = FontWeight.Normal,
     fontFamily: FontFamily = robotoSlab,
+    letterSpacing: TextUnit = TextUnit.Unspecified,
 ) {
     Text(
         text = text,
@@ -24,6 +25,7 @@ fun MyCommonText(
         modifier = modifier,
         fontSize = fontSize,
         fontWeight = fontWeight,
-        fontFamily = fontFamily
+        fontFamily = fontFamily,
+        letterSpacing = letterSpacing,
     )
 }
