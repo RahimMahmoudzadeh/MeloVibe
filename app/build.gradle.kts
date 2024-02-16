@@ -91,9 +91,7 @@ dependencies {
         implementation(swipe)
         //pager
         implementation(bundles.accompanist)
-
-        val mui = "1.6.1"
-        implementation("androidx.compose.material:material-icons-extended-android:$mui")
-
+        //media
+        implementation(bundles.media)
     }
 }

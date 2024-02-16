@@ -16,8 +16,8 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.LinearProgressIndicator
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.FastForward
-import androidx.compose.material.icons.rounded.FastRewind
+//import androidx.compose.material.icons.rounded.FastForward
+//import androidx.compose.material.icons.rounded.FastRewind
 import androidx.compose.material.icons.rounded.PlayArrow
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -85,14 +85,14 @@ fun AudioButtons() {
         horizontalArrangement = Arrangement.SpaceEvenly
     ) {
 //            AudioPlayingControl()
-        MyAppIconButton(
-            iconResId = Icons.Rounded.FastRewind,
-            onClick = {
-                //Todo: Previous Song
-            },
-            modifier = Modifier.size(45.dp),
-            tintColor = AppTheme.colorScheme.primary
-        )
+//        MyAppIconButton(
+//            iconResId = Icons.Rounded.FastRewind,
+//            onClick = {
+//                //Todo: Previous Song
+//            },
+//            modifier = Modifier.size(45.dp),
+//            tintColor = AppTheme.colorScheme.primary
+//        )
         MyAppIconButton(
             iconResId = Icons.Rounded.PlayArrow,
             onClick = {
@@ -102,17 +102,17 @@ fun AudioButtons() {
 
             tintColor = AppTheme.colorScheme.primary
         )
-        MyAppIconButton(
-            iconResId = Icons.Rounded.FastForward,
-
-            onClick = {
-                //Todo: Next Song
-            },
-            modifier = Modifier.size(45.dp),
-
-            tintColor = AppTheme.colorScheme.primary
-
-        )
+//        MyAppIconButton(
+//            iconResId = Icons.Rounded.FastForward,
+//
+//            onClick = {
+//                //Todo: Next Song
+//            },
+//            modifier = Modifier.size(45.dp),
+//
+//            tintColor = AppTheme.colorScheme.primary
+//
+//        )
     }
 }
 
